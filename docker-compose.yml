@@ -1,0 +1,39 @@
+version: '3.2'
+
+services:
+  main:
+    container_name: main_flask
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - db
+    networks:
+      - flask_app
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - flask_app
+    depends_on:
+      - db
+
+  db:
+    image: postgres:10-alpine
+    env_file: .env
+    ports:
+      - 5432:5432
+    volumes:
+      - ./.docker/data:/var/lib/postgresql/data
+    networks:
+      - flask_app
+
+networks:
+  flask_app:
+    driver: bridge

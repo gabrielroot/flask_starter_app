@@ -1,0 +1,54 @@
+version: '3.2'
+
+services:
+  main:
+    container_name: main_flask
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin_flask
+    depends_on:
+      - db
+    ports:
+      - 8080:80
+    links:
+      - db:database
+    environment:
+      - PMA_HOST:database
+      - PMA_PORT:3306
+      - PMA_USER:root
+      - PMA_PASSWORD:root
+      - PMA_ARBITRARY=1
+    networks:
+      flask_app:
+
+  db:
+    container_name: db_flask
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: flask
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./.mysql:/var/lib/mysql
+    networks:
+      flask_app:
+        ipv4_address: 172.20.0.4
+
+networks:
+  flask_app:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
