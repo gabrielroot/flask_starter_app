@@ -19,7 +19,7 @@ RUN chown app_user:app_user -R $APP_PATH
 RUN chmod 777 -R $APP_PATH
 RUN chmod g+s -R  $APP_PATH
 
-# Change current user to www
+# Change current user to app_user
 USER app_user
 
 ENV FLASK_RUN_PORT=8000

@@ -11,11 +11,11 @@ app.config['SQLALCHEMY_ECHO'] = config('SQLALCHEMY_ECHO')
 db = SQLAlchemy(app)
 
 migrate = Migrate(app, db)
-from models import User
+from models import *
 
 @app.route("/")
-@app.route("/<var>")
-def hello_world(var=''):
-    return render_template('index.html', name=var)
-  
-# Separar rotas (blueprints), usar wtforms
+def hello_world():
+    return render_template('index.html')
+
+from routes.user import user_routes
+app.register_blueprint(user_routes)

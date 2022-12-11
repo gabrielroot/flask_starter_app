@@ -6,7 +6,11 @@
 
 ###
 
-<p align="left">The purpose of this project is to provide a foundation for beginners when starting coding with flask. I found the flask microframework setup more difficult than other stacks available like Symphony, Node, React.js... So I decided to make my life and other people's life easier with this.</p>
+<p align="left">
+  The purpose of this project is to provide a basic starter for beginners when starting coding with flask. I found the
+  flask microframework setup more difficult than other stacks available like Symphony, Node, React.js... So I decided
+  to make my life and other people's life easier with this.
+</p>
 
 ###
 
@@ -17,6 +21,8 @@
     - Flask-Migrate==4.0.0 
   - PostgreSql
   - Docker
+    - Dockerfile
+    - docker-compose
 
 ###
 
@@ -56,7 +62,14 @@
 
 - `docker exec -it main_flask flask db [upgrade|downgrade]`, to up/down changes based on migration files.
 
+<br>
+
 ## Urls
 > *Accessible when the environment is running:*
   - [App](http://localhost:8000/)
   - [Adminer](http://localhost:8080/)
+
+<br>
+
+## Tips ✨
+- Start the app in non background mode (Or attach them when already running), so you can see the log of error and print outputs!
