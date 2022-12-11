@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href={{ url_for('static', filename='/css/app.css') }} rel="stylesheet"  type="text/css" />
-  <title>Hello!</title>
-</head>
-<body>
-  <h1>It's Works</h1>
-  <p>
-    You are in index route
-    </code>
-  </p>
-</body>
-</html>
+{% extends "__base.html" %}
+{% block content %}
+  <div class="layout">
+    <div class="imgBox">
+      <img class="logo" src={{ url_for('static', filename='/images/flask-logo.png') }} alt="Flask logo" />
+    </div>
+    <p class="startCoding">Your setup is ready to start coding!</p>
+  </div>
+{% endblock %}
