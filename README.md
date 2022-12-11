@@ -2,7 +2,7 @@
 
 ###
 
-<h4 align="left">About ptoject</h4>
+<h2 align="left">About ptoject</h2>
 
 ###
 
@@ -10,11 +10,13 @@
 
 ###
 
-<h4 align="left">Techs</h4>
-
-###
-
-<p align="left">- Flask<br>- PostgreSql<br>- Docker</p>
+### Techs
+  - Flask
+    - Flask==2.2.0
+    - Flask-SQLAlchemy==3.0.2
+    - Flask-Migrate==4.0.0 
+  - PostgreSql
+  - Docker
 
 ###
 
@@ -32,9 +34,29 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" width="52" alt="docker logo"  />
 </div>
 
-###
+<br>
 
-<h3 align="left">Running</h3>
+---
 
-###
-Profile Readme Generator
+<br>
+
+## Commands
+> *In the root directory of the App:*
+
+- `docker compose up -d`, to start the app in background;
+- `docker compose down`, to stop the app;
+- `docker attach [APP_NAME|ID]`, to start monitoring a container;
+- `docker exec -it [CONTAINER]`, to run a command in a container.
+
+#### Migrations
+> *Run the following lines when needs to manage migrations:*
+- `docker exec -it main_flask flask db init`, to create a folder with set to migration;
+
+- `docker exec -it main_flask flask db migrate -m "Initial migration."`, to generate a migration;
+
+- `docker exec -it main_flask flask db [upgrade|downgrade]`, to up/down changes based on migration files.
+
+## Urls
+> *Accessible when the environment is running:*
+  - [App](http://localhost:8000/)
+  - [Adminer](http://localhost:8080/)
