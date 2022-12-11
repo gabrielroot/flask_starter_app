@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">The goal of this project is to provide a foundation for beginners when starting coding with flask. I find this micro framework setup more difficult than other stacks available, so I decided to make my life and others easier with this.</p>
+<p align="left">The purpose of this project is to provide a foundation for beginners when starting coding with flask. I found the flask microframework setup more difficult than other stacks available like Symphony, Node, React.js... So I decided to make my life and other people's life easier with this.</p>
 
 ###
 
