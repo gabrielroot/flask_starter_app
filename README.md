@@ -2,7 +2,7 @@
 
 ###
 
-<h2 align="left">About ptoject</h2>
+<h4 align="left">About ptoject</h4>
 
 ###
 
@@ -10,7 +10,11 @@
 
 ###
 
-<p align="left">Techs:<br>- Flask<br>- PostgreSql<br>- Docker</p>
+<h4 align="left">Techs</h4>
+
+###
+
+<p align="left">- Flask<br>- PostgreSql<br>- Docker</p>
 
 ###
 
@@ -29,3 +33,8 @@
 </div>
 
 ###
+
+<h3 align="left">Running</h3>
+
+###
+Profile Readme Generator
