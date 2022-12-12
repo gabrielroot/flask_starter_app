@@ -31,7 +31,6 @@
 ###
 
 <div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height="40" width="52" alt="flask logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" width="52" alt="python logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="52" alt="html5 logo"  />
@@ -52,7 +51,7 @@
 - `docker compose up -d`, to start the app in background;
 - `docker compose down`, to stop the app;
 - `docker attach [APP_NAME|ID]`, to start monitoring a container;
-- `docker exec -it [CONTAINER]`, to run a command in a container.
+- `docker exec -it [CONTAINER] [COMMAND]`, to run a command in a container.
 
 #### Migrations
 > *Run the following lines when needs to manage migrations:*
