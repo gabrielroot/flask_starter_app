@@ -45,19 +45,16 @@
 
 <br>
 
-## ▶️ Run: Step by Step
+## Run: Step by Step ▶️
 > *NOTE: What do you really need in your physical machine?*
-<br>
 > - [Docker](https://docs.docker.com/get-docker/)
-<br>
 > - [Docker Compose](https://docs.docker.com/compose/install/)
 > ### **O N L Y**
-<br>
 
-- git clone https://github.com/gabrielroot/flask_starter_app.git
+- `git clone https://github.com/gabrielroot/flask_starter_app.git`
 - Navigate to project root directory
-- Create a .env file based on .env.sample
-- docker-compose up -d
+- Create a `.env` file based on `.env.sample`
+- `docker-compose up -d`
 - Wait for downloading images, libraries and setup
 - Well done!
 
