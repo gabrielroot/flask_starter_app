@@ -48,7 +48,7 @@
 ## Run: Step by Step ▶️
 > *NOTE: What do you really need in your physical machine?*
 > - [Docker](https://docs.docker.com/get-docker/)
-> - [Docker Compose](https://docs.docker.com/compose/install/)
+> - [Docker Compose](https://docker-docs.netlify.app/compose/install/#install-compose)
 > ### **O N L Y**
 
 - `git clone https://github.com/gabrielroot/flask_starter_app.git`
